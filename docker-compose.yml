@@ -1,0 +1,15 @@
+version: '3'
+services:
+  jupyterlab:
+    build:
+      context: ./notebooks/
+    volumes:
+      - "./:/home/jovyan/work"
+    user: root
+    ports:
+      - "9999:8888"
+    environment:
+      NB_UID: 1000
+      NB_GID: 1000
+      GRANT_SUDO: "yes"
+    command: start.sh jupyter lab --NotebookApp.password="sha1:d382f585c867:09d7af4613fb433cbebf2606a5ede52c705f5d45"

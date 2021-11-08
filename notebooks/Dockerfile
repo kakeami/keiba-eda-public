@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook
+FROM jupyter/datascience-notebook:2021-11-04
 MAINTAINER Kakeami
 
 RUN pip install jupyterlab && \
